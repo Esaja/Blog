@@ -1,0 +1,23 @@
+﻿@model Blog.Models.Blogi
+
+@{
+    ViewBag.Title = "Details";
+    
+}
+
+<h2>@Model.Otsikko</h2>
+
+<fieldset>
+    <legend>@Model.Otsikko</legend>
+
+    <div class="display-field">
+        <p>@Model.Teksti</p>
+    </div>
+        <div class="display-field">
+        <p><b>@Model.Nimi</b></p>
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

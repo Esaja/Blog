@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Blog.Models.Blogi>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Blogikirjoitukset</h2>
+
+@foreach (var item in Model) {
+    
+    <h2>@item.Otsikko</h2>
+
+    <fieldset>
+        <legend>@item.Otsikko</legend>
+
+        <div class="display-field">
+            <p>@item.Teksti</p>
+        </div>
+            <div class="display-field">
+            <p><b>@item.Nimi</b></p>
+        </div>
+    </fieldset>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id=item.Id })        
+    </p>
+    <hr />
+}
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+    
+    
+
+
+
